@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sample</title>
+    <title>ブログ</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' =>true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
-
   <body>
-    <%= yield %>
+    <header class="header">
+     <div class="container">
+      <ul class="row">
+        <li class="col-sm-6 col-md-3"><a href="#">topページ</li>
+        <li class="col-sm-6 col-md-3"><a href="#">ブログ一覧</li>
+      </ul>
+
+<%= yield %>
+      
+    <footer>
+      <p>201808期</p>
+      <p>川崎智美</p>
+    </footer>
   </body>
 </html>
