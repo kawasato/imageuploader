@@ -1,3 +1,10 @@
+html{
+    position: relative;
+    min-height: 100%;
+    text-align: center;
+}
+
+
 li{
     list-style: none;
     margin-top: 20px;
@@ -5,21 +12,60 @@ li{
 }
 
 .header{
-    font-size:20px;
-    font-weight:bold;
-    text-align:center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+@media screen and (max-width: 700px) {
+    .image {
+        flex-direction: column;
+    }
+}
 img{
     width: 250px;
-    height: 150px;
+    height: 200px;
     float: left;
+    object-fit: cover;
 }
 
 h1{
     clear: both;
+    text-align: center;
+    background-color: aquamarine;
 }
 
-p{
-    float: left;
+
+.new_blog {
+    
 }
+
+.blog-make {
+    background-color: white;
+    color: darkblue;
+    
+}
+
+.blog_title {
+    
+
+}
+.submit {
+   
+}
+
+
+footer {
+    width: 100%;
+    background-color:#FFC0CB ;
+    padding: 20px 0 10px 0;
+    color: white;
+    margin: auto;
+    font-size: 14px;
+  }
