@@ -10,7 +10,9 @@ li{
     margin-top: 20px;
     text-align: left;
 }
-
+ body {
+     height: 100%;
+ }
 .header{
     width: 100%;
     font-size: 20px;
@@ -59,14 +61,7 @@ h2{
 }
 
 .btn-default {
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: darkviolet;
-    color: white;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 5px darkviolet;
-    border: dashed 1px #FFF;
+    
 }
 
 .btn-default :hover {
@@ -96,4 +91,5 @@ footer {
     color: white;
     margin: auto;
     font-size: 14px;
+    bottom: 0;
   }
