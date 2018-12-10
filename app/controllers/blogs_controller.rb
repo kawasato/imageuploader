@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:show, :edit, :update, :destroy]
+  before_action :require_login, only:[:new, :edit, :show, :destroy]
   
   def index
     @blogs = Blog.all
@@ -48,6 +49,12 @@ class BlogsController < ApplicationController
   
   private
   
+  def require_login
+    unless logged_in?
+      redirect_to new_session_path,notice: "ログインしてください！"
+    end
+  end
+
   def blog_params
     params.require(:blog).permit(:title,:content)
   end

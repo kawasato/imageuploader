@@ -46,30 +46,15 @@ h1{
 h2{
     margin: 0 auto;
 }
-.new_blog {
-    
+.blog-links {
+    color: darkslategrey;
+    background-color: white;
 }
-
 .blog-make {
     background-color: white;
     color: darkblue;  
 }
-
-.blog_title {
-}
-.submit {  
-}
-
-.btn-default {
-    
-}
-
-.btn-default :hover {
-    background: mediumorchid;
-    color: white;
-}
-
-.btn-group-vertical{
+.btn {
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -78,12 +63,20 @@ h2{
     border-radius: 4px;
     box-shadow: 0px 0px 0px 5px #668ad8;
     border: dashed 1px #FFF;
+    margin: 20px;
 }
 
-.btn-group-vertical :hover{
-border: dotted 1px #FFF;
+.btn :hover{
+    text-decoration: none;
+    border: dotted 1px #FFF;
+}
+#btn a { 
+    color:white;
 }
 
+.error {
+    float: right;
+}
 footer {
     width: 100%;
     background-color:#FFC0CB ;

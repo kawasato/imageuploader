@@ -12,13 +12,24 @@
     <header class="header">
       <div class="container">
         <ul class="row">
-          <li class="col-sm-6 col-md-3"><a href="/blogs/new">新規投稿</a></li>
-          <li class="col-sm-6 col-md-3"><a href="/blogs">ブログ一覧</a></li>
-        </ul>
+          <li class="col-sm-2 col-md-2"><a href="/blogs/new">新規投稿</a></li>
+          <li class="col-sm-2 col-md-2"><a href="/blogs">ブログ一覧</a></li>
+          
+          <% if logged_in? %>
+          <li class="col-sm-2 col-md-2"><%= link_to "プロフィール", user_path(current_user.id) %></li>
+          <li class="col-sm-2 col-md-2"><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+          <% else %>
+          <li class="col-sm-2 col-md-2"><%= link_to "新規登録", new_user_path %></li>
+          <li class="col-sm-2 col-md-2"><%= link_to "ログイン", new_session_path %></li>
+          <% end %>
+          </ul>
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "#{key}") %>
+          <% end %>
       </div>
     </header>
-
-<%= yield %>
+            
+    <%= yield %>
       
     <footer>
       <div id="footer">
