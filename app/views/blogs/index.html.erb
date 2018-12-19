@@ -13,10 +13,13 @@
         <div class="col-xs-12 col-md-6 blog-panel">
             <h2>タイトル：<%= blog.title %></h2>
             <p>内容：<%= blog.content %></p>
+            <p>投稿者：<%= blog.user.name %></p>
             <div class="blog-links">
                 <%= link_to'詳細を確認する',blog_path(blog.id) %></a>
-                <%= link_to "ブログ編集", edit_blog_path(blog.id) %>
-                <%= link_to 'ブログ削除', blog_path(blog.id), method: :delete,data: { confirm: '本当に削除してもいいですか？' } %>
+                    <% if blog.user_id == current_user.id %> 
+                        <%= link_to "ブログ編集", edit_blog_path(blog.id) %>
+                        <%= link_to 'ブログ削除', blog_path(blog.id), method: :delete,data: { confirm: '本当に削除してもいいですか？' } %>
+                    <% end %>
             </div>
         </div>
     <% end %>
