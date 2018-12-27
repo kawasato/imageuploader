@@ -6,6 +6,13 @@
 
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
+  <div class= "button ">
+    <% if @blog.image.url.present? %>
+      <p>画像</p>
+      <%= image_tag(@blog.image.url) %>
+    <% end %>
+    <%= form.hidden_field :image_cache %>
+  </div> 
   <%= form.submit  "登録する" %>
 <% end %>
 
