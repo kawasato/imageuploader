@@ -10,31 +10,21 @@ li{
     margin-top: 20px;
     text-align: left;
 }
- body {
+body {
     height: 100%;
-    
  }
+
+
 .header{
     width: 100%;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-.image{
-    display: flex;
+
+#title_image {
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width: 700px) {
-    .image {
-        flex-direction: column;
-    }
-}
-img{
-    width: 250px;
-    height: 200px;
-    float: left;
     object-fit: cover;
 }
 
@@ -47,6 +37,17 @@ h1{
 h2{
     margin: 0 auto;
 }
+
+.blog_image {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.blog_title {
+    padding: 10px; 
+}
+
 .blog-links {
     color: darkslategrey;
     background-color: white;
@@ -74,14 +75,14 @@ h2{
 #btn a { 
     color:white;
 }
+.btn2 {
+    padding: 20px;
+}
 
 .blog-panel{ 
     background-color: #FFF;
 }
 
-.error {
-    float: right;
-}
 footer {
     width: 100%;
     background-color:#32f198;

@@ -1,7 +1,7 @@
 <h1>ブログ詳細画面</h1>
     <% if @blog.image.url.present? %>
-        <p>
-            <strong>Image:</strong>
+        <p class = "blog_image">
+            <strong>画像:</strong>
             <%= image_tag @blog.image.url %>
         </p>
     <% end %>

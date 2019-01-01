@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="blog_title">
+  <div class="blog_image">
     <%= form.label :image %>
     <%= image_tag(@blog.image) if @blog.image.present? %>
     <%= form.file_field :image %>

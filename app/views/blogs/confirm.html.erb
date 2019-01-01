@@ -6,7 +6,7 @@
 
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
-  <div class= "button ">
+  <div class= "blog_image">
     <% if @blog.image.url.present? %>
       <p>画像</p>
       <%= image_tag(@blog.image.url) %>
