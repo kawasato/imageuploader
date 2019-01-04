@@ -14,7 +14,7 @@
   <div class="blog_image">
     <%= form.label :image %>
     <%= image_tag(@blog.image) if @blog.image.present? %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image_cache %>
     <%= form.hidden_field :image_cache %>
   </div>      
   <div class="blog_title">
